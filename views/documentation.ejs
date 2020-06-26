@@ -56,7 +56,7 @@
             <ul>
                 <li>User register<strong> - /register/user or /register/customer</strong></li>
                 <p><h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6></p>
-                <div  class="alert alert-danger">
+                <div  class="alert alert-info">
                     &#123;
                    <p> &#8220; id &#8221; : 0,</p>
                     <p>&#8220; name &#8221; : &#8220; Henry &#8221;,</p>
@@ -70,7 +70,7 @@
                 <p>
                 <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
                 </p>
-                <div class="alert alert-danger">
+                <div class="alert alert-info">
                     &#123;                    
                     <p>&#8220; phone &#8221; : &#8220; 093456758 &#8221;,</p>
                     <p>&#8220; password &#8221; : &#8220; string &#8221;</p>                    
@@ -83,7 +83,7 @@
                     <p>
                     <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
                     </p>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-info">
                         &#123;                        
                         <p>&#8220; phone &#8221; : &#8220; 093456758 &#8221;</p>
                         &#125;
@@ -92,7 +92,7 @@
                     <p>
                     <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
                     </p>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-info">
                         &#123;
                         <p> &#8220; id &#8221; : &#40;from response in <strong>/auth/verify-phone</strong>&#41;,</p>
                         <p> &#8220; token &#8221; : &#8220; 29TumwOjfqoyrP2Pnsuw67M &#8221;</p>                        
@@ -103,7 +103,7 @@
                     <p>
                     <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
                     </p>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-info">
                         &#123;
                         <p>&#8220; email &#8221; : &#8220; henry@domain.com &#8221;</p>
                         &#125;
@@ -112,7 +112,7 @@
                     <p>
                     <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
                     </p>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-info">
                         &#123;
                         <p>&#8220; new_password &#8221; : &#8220; string &#8221;</p>
                         &#125;
@@ -129,7 +129,7 @@
                     <p>
                     <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
                     </p>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-info">
                         &#123;                        
                         <p>&#8220; first_name &#8221; : &#8220; Henry &#8221;,</p>
                         <p>&#8220; last_name &#8221; : &#8220; McHall &#8221;,</p>
@@ -144,21 +144,31 @@
                     <p>
                     <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
                     </p>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-info">
                         &#123;
-                        <p> &#8220; customer_id &#8221; : &#8220; customer_id &#8221;,</p>                        
+                        <p> &#8220; user_id &#8221; : &#8220; ID of user that is to be retrieved &#8221;,</p>                        
                         &#125;
                     </div>
                 </li>
                 <li>Update user<strong>- /user/update/:user_id</strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>user_id</li>
-                    </ul>
-                    <h6>Body</h6>
-                    <ul class="alert alert-primary">
-                        <li>content[data]</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p> &#8220; user_id &#8221; : &#8220; ID of user that is to be Updated &#8221;,</p>
+                        &#125;
+                    </div>
+                    <p>
+                    <h6><strong>Body: </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; first_name &#8221; : &#8220; Henry &#8221;,</p>
+                        <p>&#8220; last_name &#8221; : &#8220; McHall &#8221;,</p>
+                        <p>&#8220; phone_number &#8221; : &#8220; 093456758 &#8221;,</p>                        
+                        &#125;
+                    </div>
                 </li>
                 <li>Delete user (logical delete)<strong>- /user/delete/:user_id</strong></li>
             </ul>
@@ -169,31 +179,57 @@
             <h4>Endpoints</h4>
             <ul>
                 <li>Create store<strong> - /store/new [POST]</strong>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>store_name</li>
-                        <li>Phone_number</li>
-                        <li>shop_address</li>
-                        <li>tagline</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;                       
+                        <p>&#8220; store_name &#8221; : &#8220; Kiera Collections &#8221;,</p>                        
+                        <p>&#8220; phone_number &#8221; : &#8220; 093456758 &#8221;,</p>
+                        <p>&#8220; shop_address &#8221; : &#8220; 20 Bale's view drive, Lagos. &#8221;,</p>
+                        <p>&#8220; tagline &#8221; : &#8220; Live green, go green, go vegan &#8221;</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>Retrieve store <strong> - /store/:store_id [GET]</strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>store_id</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p> &#8220; store_id &#8221; : &#8220; ID of store that is to be retrieved &#8221;,</p>
+                        &#125;
+                    </div>
                 </li>
-                <li>Update store<strong> - /store/update/:store_id [PUT]</strong>
-                <h6>Params</h6>
-                <ul class="alert alert-primary">
-                    <li>Update locations</li>
-                </ul>
+                <li>Update store<strong> - /store/update/:store_id [PUT]</strong>  
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; store_id &#8221; : &#8220; ID of store to be updated &#8221;,</p>
+                        &#125;
+                    </div>
+                <p>
+                <h6><strong>Body: </strong></h6>
+                </p>
+                <div class="alert alert-info">
+                    &#123;                    
+                    <p>&#8220; phone_number &#8221; : &#8220; 093456758 &#8221;,</p>
+                    <p>&#8220; shop_address &#8221; : &#8220; 20 Bale's view drive, Lagos. &#8221;,</p>
+                    <p>&#8220; tagline &#8221; : &#8220; Live green, go green, go vegan &#8221;</p>
+                    &#125;
+                </div>
                 </li>
                 <li>Delete store<strong> - /store/delete/:store_id [DELETE]</strong>
-                    <h6>Params</h6>
-                    <ul class="alert alert-primary">
-                        <li>store_id</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p> &#8220; store_id &#8221; : &#8220; ID of store that is to be deleted &#8221;,</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>View all user's stores<strong> - /store/all [GET]</strong>
                 </li>
@@ -205,23 +241,35 @@
             <h4>Endpoints</h4>
             <ul>
                 <li>Register new complaint<strong>- /complaint/new [POST]</strong>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>message</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p> &#8220; message &#8221; : &#8220; This is a complaint. &#8221;,</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>Retrieve all complaints<strong> - /complaint/all [GET]</strong></li>
                 <li>Update complaint<strong> - /complaint/update/:complaint_id [PUT]</strong>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>message</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p> &#8220; message &#8221; : &#8220; This is an updated complaint. &#8221;,</p>
+                        &#125;
+                    </div>
                 </li>
-                <li>Delete a complaint form<strong> - /complaint/delete/:complaint_id [DETETE]</strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>complaint_id</li>
-                    </ul>
+                <li>Delete a complaint form<strong> - /complaint/delete/:complaint_id [DELETE]</strong>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p> &#8220; complaint_id &#8221; : &#8220; ID of complaint that is to be deleted. &#8221;,</p>
+                        &#125;
+                    </div>
                 </li>
             </ul>
         </div>
