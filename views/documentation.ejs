@@ -55,45 +55,68 @@
             <h4>Endpoints</h4>
             <ul>
                 <li>User register<strong> - /register/user or /register/customer</strong></li>
-                <h6>Body: </h6>
-                <ul  class="alert alert-primary">
-                    <li>phone_number</li>
-                    <li>first_name</li>
-                    <li>last_name</li>
-                    <li>email</li>
-                    <li>password</li>
-                </ul>
+                <p><h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6></p>
+                <div  class="alert alert-danger">
+                    &#123;
+                   <p> &#8220; id &#8221; : 0,</p>
+                    <p>&#8220; name &#8221; : &#8220; Henry &#8221;,</p>
+                   <p>&#8220; lastname &#8221; : &#8220; McHall &#8221;,</p>
+                   <p>&#8220; phone &#8221; : &#8220; 093456758 &#8221;,</p>
+                   <p>&#8220; password &#8221; : &#8220; string &#8221;,</p>
+                   <p>&#8220; email &#8221; : &#8220; henry@domain.com &#8221;</p>
+                    &#125;
+                </div>
                 <li>User login<strong> - /login</strong></li>
-                <h6>Body: </h6>
-                <ul  class='alert alert-primary'>
-                    <li>phone_number</li>
-                    <li>password</li>
-                </ul>
+                <p>
+                <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                </p>
+                <div class="alert alert-danger">
+                    &#123;                    
+                    <p>&#8220; phone &#8221; : &#8220; 093456758 &#8221;,</p>
+                    <p>&#8220; password &#8221; : &#8220; string &#8221;</p>                    
+                    &#125;
+                </div>
                 <ul>
                     <h5 class="mt-2">Account Activation</h5>
                     <p>Also, a user is required to verify his/her phone number after registration in order to activate his/her account.</p>
                     <li>Send SMS(OTP)<strong> - /auth/verify-phone</strong></li>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>phone</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-danger">
+                        &#123;                        
+                        <p>&#8220; phone &#8221; : &#8220; 093456758 &#8221;</p>
+                        &#125;
+                    </div>
                     <li>Verify token<strong> - /auth/verify [POST]</strong></li>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>id (from response in <strong>/auth/verify-phone</strong> )</li>
-                        <li>token</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-danger">
+                        &#123;
+                        <p> &#8220; id &#8221; : &#40;from response in <strong>/auth/verify-phone</strong>&#41;,</p>
+                        <p> &#8220; token &#8221; : &#8220; 29TumwOjfqoyrP2Pnsuw67M &#8221;</p>                        
+                        &#125;
+                    </div>                    
                     <h5 class="mt-2">Account Recovery</h5>
                     <li>Send password reset link <strong>- /forgot-password [POST]</strong></li>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>Email address</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-danger">
+                        &#123;
+                        <p>&#8220; email &#8221; : &#8220; henry@domain.com &#8221;</p>
+                        &#125;
+                    </div>
                     <li>Reset password<strong> - /reset-password [POST]</strong></li>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>new_password</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-danger">
+                        &#123;
+                        <p>&#8220; new_password &#8221; : &#8220; string &#8221;</p>
+                        &#125;
+                    </div>
                 </ul>
             </ul>
         </div>
@@ -103,21 +126,29 @@
             <h4>Endpoints</h4>
             <ul>
                 <li>Create user<strong>- /user/new [POST]</strong>
-                    <h6>Bosy: </h6>
-                    <ul class="alert alert-primary">
-                        <li>phone_number</li>
-                        <li>first_name</li>
-                        <li>last_name</li>
-                        <li>email</li>
-                        <li>password</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-danger">
+                        &#123;                        
+                        <p>&#8220; first_name &#8221; : &#8220; Henry &#8221;,</p>
+                        <p>&#8220; last_name &#8221; : &#8220; McHall &#8221;,</p>
+                        <p>&#8220; phone_number &#8221; : &#8220; 093456758 &#8221;,</p>
+                        <p>&#8220; password &#8221; : &#8220; string &#8221;,</p>
+                        <p>&#8220; email &#8221; : &#8220; henry@domain.com &#8221;</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>Retrieve all users<strong>- /user/all [GET]</strong></li>
                 <li>Retrieve user<strong> - /user/:user_id [GET]</strong>
-                    <h6>Params</h6>
-                    <ul class="alert alert-primary">
-                        <li>customer_id</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-danger">
+                        &#123;
+                        <p> &#8220; customer_id &#8221; : &#8220; customer_id &#8221;,</p>                        
+                        &#125;
+                    </div>
                 </li>
                 <li>Update user<strong>- /user/update/:user_id</strong>
                     <h6>Params: </h6>
