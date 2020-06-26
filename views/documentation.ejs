@@ -292,8 +292,7 @@
                     </div>
                 </li>
                 <li>View all transactions<strong> - /transaction/all</strong></li>
-                <li>view a single transaction<strong> - /transaction/:transaction_id [UPDATE]</strong>
-                    <h6>Params: </h6>
+                <li>view a single transaction<strong> - /transaction/:transaction_id [UPDATE]</strong>                    
                     <p>
                     <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
                     </p>
@@ -301,21 +300,27 @@
                         &#123;
                         <p>&#8220; transaction_id &#8221; : 0</p>                        
                         &#125;
-                    </div>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li></li>
-                    </ul>
+                    </div>                    
                 </li>
                 <li>Update transaction<strong> - /transaction/update/:transaction_id</strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>transaction_id</li>
-                    </ul>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>Entries to update</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; transaction_id &#8221; : 0</p>
+                        &#125;
+                    </div>
+                    <h6><strong>Body: </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; amount &#8221; : 0,</p>
+                        <p>&#8220; interest &#8221; : 0,</p>
+                        <p>&#8220; total_amount &#8221; : 0,</p>
+                        <p>&#8220; description &#8221; : &#8220; This is a transaction description. &#8221;</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>Delete transaction (logical delete)<strong>- /transaction/delete/:transaction_id</strong></li>
             </ul>
@@ -326,33 +331,54 @@
             <h4>Endpoints</h4>
             <ul>
                 <li>Create customer<strong> - /customer/new [POST]</strong>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>name</li>
-                        <li>phone_number</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; name &#8221; : &#8220; Henry McHall &#8221;</p>
+                        <p>&#8220; phone_number &#8221; : 098382331</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>Retrieve customer<strong> - /customer/:customer_id [POST]</strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>customer_id</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; customer_id &#8221; : 0</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>Update customer details<strong> - /customer/update/:customer_id [PUT] </strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>customer_id</li>
-                    </ul>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>Entries to update</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; customer_id &#8221; : 0</p>
+                        &#125;
+                    </div>
+                    <p>
+                    <h6><strong>Body: </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; name &#8221; : &#8220; Henry McHall &#8221;</p>
+                        <p>&#8220; phone_number &#8221; : 098382331</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>Delete customer (logical delete)<strong> - /customer/delete/:customer_id [DELETE]</strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>customer_id</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; customer_id &#8221; : 0</p>
+                        &#125;
+                    </div>
                 </li>
             </ul>
         </div>
@@ -363,16 +389,24 @@
             <h4>Endpoints</h4>
             <ul>
                 <li>Send SMS reminder<strong> - /reminder/sms/:customer_id [POST]</strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>customer_id</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; customer_id &#8221; : 0</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>Send Email reminder <strong> - /reminder/email/:customer_id [POST]</strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>customer_id</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; customer_id &#8221; : 0</p>
+                        &#125;
+                    </div>
                 </li>
             </ul>
         </div>
@@ -383,10 +417,14 @@
             <p>You can also call a customer using the below endpoint</p>
             <ul>
                 <li>Call a customer's number<strong>- /call/:customer_id [POST]</strong>
-                    <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>customer_id</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; customer_id &#8221; : 0</p>
+                        &#125;
+                    </div>
                 </li>
             </ul>
         </div>
@@ -406,7 +444,7 @@
     
     body {
         color: #5b5b5b;
-        font-size: large;
+        font-size: large;        
     }
     
     h1,
