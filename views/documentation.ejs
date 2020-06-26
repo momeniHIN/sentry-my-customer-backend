@@ -279,20 +279,29 @@
             <h4>Endpoints</h4>
             <ul>
                 <li>Add new transaction<strong>- /transaction/new</strong>
-                    <h6>Body: </h6>
-                    <ul class="alert alert-primary">
-                        <li>amount</li>
-                        <li>interest</li>
-                        <li>total_amount</li>
-                        <li>description</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Body: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; amount &#8221; : 0,</p>
+                        <p>&#8220; interest &#8221; : 0,</p>
+                        <p>&#8220; total_amount &#8221; : 0,</p>
+                        <p>&#8220; description &#8221; : &#8220; This is a transaction description. &#8221;</p>
+                        &#125;
+                    </div>
                 </li>
                 <li>View all transactions<strong> - /transaction/all</strong></li>
                 <li>view a single transaction<strong> - /transaction/:transaction_id [UPDATE]</strong>
                     <h6>Params: </h6>
-                    <ul class="alert alert-primary">
-                        <li>transaction_id</li>
-                    </ul>
+                    <p>
+                    <h6><strong>Params: <sup class="text-danger">&#42;Required</sup> </strong></h6>
+                    </p>
+                    <div class="alert alert-info">
+                        &#123;
+                        <p>&#8220; transaction_id &#8221; : 0</p>                        
+                        &#125;
+                    </div>
                     <h6>Body: </h6>
                     <ul class="alert alert-primary">
                         <li></li>
